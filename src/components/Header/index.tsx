@@ -6,6 +6,7 @@ import {
   ContainerCartAndLocation,
   ContainerHeader,
 } from './styles'
+import { NavLink } from 'react-router-dom'
 
 export function Header() {
   return (
@@ -17,7 +18,9 @@ export function Header() {
           <span>Porto Alegre,RS</span>
         </ButtonLocation>
         <ButtonCart>
-          <ShoppingCart size={22} />
+          <NavLink to={'/checkout'}>
+            <ShoppingCart size={22} color="#DBAC2C" />
+          </NavLink>
         </ButtonCart>
       </ContainerCartAndLocation>
     </ContainerHeader>

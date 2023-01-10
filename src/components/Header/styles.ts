@@ -39,17 +39,19 @@ export const ButtonLocation = styled.button`
     cursor: pointer;
   }
 `
-export const ButtonCart = styled.button`
+export const ButtonCart = styled.div`
   width: 2.375rem;
   height: 2.375rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border: 0;
   outline: none;
   border-radius: 6px;
 
-  color: ${(props) => props.theme['yellow-dark']};
   background: ${(props) => props.theme['yellow-light']};
-
   &:hover {
     cursor: pointer;
   }

@@ -1,8 +1,9 @@
 import { ShoppingCart } from 'phosphor-react'
+import Coffees from '../../../.././assets/Coffees/Coffee.svg'
 import {
   ContainerCoffee,
   ContainerDetails,
-  ContainerPrice,
+  ContainerBuy,
   ContainerTheAmount,
   ContainerButtonCart,
 } from './styles'
@@ -10,22 +11,22 @@ export function Coffee() {
   return (
     <ContainerCoffee>
       <ContainerDetails>
-        <img src="" alt="" />
+        <img src={Coffees} alt="" />
         <span>Tradicional</span>
         <h3>Expresso Tradicional</h3>
         <p>O tradicional café feito com água quente e grãos moídos</p>
       </ContainerDetails>
-      <ContainerPrice>
+      <ContainerBuy>
         <span>
-          r$ <strong>9,90</strong>
+          R$ <strong>9,90</strong>
         </span>
         <ContainerTheAmount>
           <input type="number" min={0} />
           <ContainerButtonCart>
-            <ShoppingCart size={16} />
+            <ShoppingCart size={22} color="White" />
           </ContainerButtonCart>
         </ContainerTheAmount>
-      </ContainerPrice>
+      </ContainerBuy>
     </ContainerCoffee>
   )
 }

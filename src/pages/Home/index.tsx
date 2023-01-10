@@ -5,7 +5,16 @@ export function Home() {
   return (
     <ContainerHome>
       <BannerCoffee />
+      <h1>Nossos cafés</h1>
       <ContainerCoffees>
+        <Coffee></Coffee>
+        <Coffee></Coffee>
+        <Coffee></Coffee>
+        <Coffee></Coffee>
+        <Coffee></Coffee>
+        <Coffee></Coffee>
+        <Coffee></Coffee>
+        <Coffee></Coffee>
         <Coffee></Coffee>
       </ContainerCoffees>
     </ContainerHome>
