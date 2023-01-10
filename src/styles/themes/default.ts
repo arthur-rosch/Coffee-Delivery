@@ -4,9 +4,9 @@ export const DefaultTheme = {
   'yellow-dark': '#DBAC2C',
   'yellow-light': '#F1E9C9',
 
-  purple: '#4B2995',
-  'purple-light': '#8047F8',
-  'purple-dark': '#EBE5F9',
+  purple: '#8047F8',
+  'purple-light': '#EBE5F9',
+  'purple-dark': '#4B2995',
 
   'base-title': '#272221',
   'base-subtitle': '#403937',

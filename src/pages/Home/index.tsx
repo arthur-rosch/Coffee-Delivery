@@ -1,9 +1,13 @@
-import { ContainerHome } from './styles'
-
+import { BannerCoffee } from './components/bannerCoffee'
+import { ContainerHome, ContainerCoffees } from './styles'
+import { Coffee } from './components/Coffee'
 export function Home() {
   return (
     <ContainerHome>
-      <h1>Home</h1>
+      <BannerCoffee />
+      <ContainerCoffees>
+        <Coffee></Coffee>
+      </ContainerCoffees>
     </ContainerHome>
   )
 }

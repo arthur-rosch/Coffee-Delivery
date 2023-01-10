@@ -7,7 +7,9 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body{
-        background: black;
-        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: ${(props) => props.theme.background};
     }
 `
