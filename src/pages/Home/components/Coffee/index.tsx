@@ -23,7 +23,7 @@ export function Coffee() {
         <ContainerTheAmount>
           <input type="number" min={0} />
           <ContainerButtonCart>
-            <ShoppingCart size={22} color="White" />
+            <ShoppingCart size={22} weight="fill" color="White" />
           </ContainerButtonCart>
         </ContainerTheAmount>
       </ContainerBuy>

@@ -1,3 +1,12 @@
+import { FormCheckout } from './components/FormCheckout'
+import { OrderDetails } from './components/OrderDetails'
+import { ContainerCheckout } from './styles'
 export function Checkout() {
-  return <h1>Checkout</h1>
+  return (
+    <ContainerCheckout>
+      <FormCheckout></FormCheckout>
+
+      <OrderDetails></OrderDetails>
+    </ContainerCheckout>
+  )
 }

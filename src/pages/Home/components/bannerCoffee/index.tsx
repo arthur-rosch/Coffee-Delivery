@@ -24,13 +24,13 @@ export function BannerCoffee() {
         <ContainerBenefits>
           <ContainerInfo>
             <ContainerCart>
-              <ShoppingCart size={16} />
+              <ShoppingCart size={16} weight="fill" />
             </ContainerCart>
 
             <p>Compra simples e segura</p>
 
             <ContainerPackage>
-              <Package size={16} />
+              <Package size={16} weight="fill" />
             </ContainerPackage>
 
             <p>Embalagem mantém o café intacto</p>
@@ -38,13 +38,13 @@ export function BannerCoffee() {
 
           <ContainerInfo>
             <ContainerTimer>
-              <Timer size={16} />
+              <Timer size={16} weight="fill" />
             </ContainerTimer>
 
             <p>Entrega rápida e rastreada</p>
 
             <ContainerCoffee>
-              <Coffee size={16} />
+              <Coffee size={16} weight="fill" />
             </ContainerCoffee>
 
             <p>O café chega fresquinho até você</p>
