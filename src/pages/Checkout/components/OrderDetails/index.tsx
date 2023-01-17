@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { CoffeeContext, Coffees } from '../../../../contexts/CoffeesContexts'
 import { CardCoffee } from './components/CardCoffee'
 import {
   ContainerOrder,
@@ -8,13 +10,24 @@ import {
 } from './styles'
 
 export function OrderDetails() {
+  const { Coffee } = useContext(CoffeeContext)
+  console.log(Coffee)
   return (
     <ContainerOrder>
       <h2>Cafés selecionados</h2>
       <ContainerOrderDetails>
         <ContainerCoffeeList>
-          <CardCoffee></CardCoffee>
-          <CardCoffee></CardCoffee>
+          {Coffee.map((item: Coffees) => {
+            return (
+              <CardCoffee
+                key={item.Coffee}
+                Coffee={item.Coffee}
+                ImgCoffee={item.ImgCoffee}
+                Price={item.Price}
+                Amount={item.Amount}
+              />
+            )
+          })}
         </ContainerCoffeeList>
         <ContainerValueTotal>
           <div>

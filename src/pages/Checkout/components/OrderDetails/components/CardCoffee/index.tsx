@@ -5,19 +5,21 @@ import {
   AmountCoffee,
   ButtonRemoveCoffee,
 } from './styles'
-import Coffee from '../../../../../.././assets/Coffees/Coffee.svg'
-export function CardCoffee() {
+
+import { Coffees } from '../../../../../../contexts/CoffeesContexts'
+
+export function CardCoffee({ ImgCoffee, Coffee, Amount, Price }: Coffees) {
   return (
     <ContainerCardCoffee>
-      <img src={Coffee} alt="" width={64} height={64} />
+      <img src={ImgCoffee} alt="" width={64} height={64} />
       <ContainerInformation>
-        <NameCoffee>Expresso Tradicional</NameCoffee>
+        <NameCoffee>{Coffee}</NameCoffee>
         <div>
-          <AmountCoffee type="number" name="" id="" />
+          <AmountCoffee type="number" value={Amount} />
           <ButtonRemoveCoffee>Remover</ButtonRemoveCoffee>
         </div>
       </ContainerInformation>
-      <p>R$9,90</p>
+      <p>{Price}</p>
     </ContainerCardCoffee>
   )
 }

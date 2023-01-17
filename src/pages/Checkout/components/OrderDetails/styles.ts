@@ -8,7 +8,7 @@ export const ContainerOrder = styled.div`
   flex-direction: column;
 
   h2 {
-    left: 67rem;
+    left: 50rem;
     top: 7.125rem;
     width: 9.75rem;
     height: 1.4375rem;

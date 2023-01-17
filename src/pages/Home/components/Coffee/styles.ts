@@ -109,7 +109,10 @@ export const ContainerButtonCart = styled.button`
 
   background: ${(props) => props.theme['purple-dark']};
 
-  &:hover {
+  &:disabled {
+    opacity: 0.7;
+  }
+  &:not(:disabled):hover {
     transition: 0.3s;
     background: ${(props) => props.theme.purple};
   }
