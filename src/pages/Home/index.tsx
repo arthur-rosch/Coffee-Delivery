@@ -140,11 +140,11 @@ export function Home() {
           return (
             <Coffee
               key={item.id}
-              imgCoffee={item.ImgCoffee}
-              typeCoffee={item.TypeCoffee}
-              nameCoffee={item.NameCoffee}
-              descriptionCoffee={item.DescriptionCoffee}
-              price={item.Price}
+              ImgCoffee={item.ImgCoffee}
+              TypeCoffee={item.TypeCoffee}
+              Coffee={item.NameCoffee}
+              DescriptionCoffee={item.DescriptionCoffee}
+              Price={Number(item.Price)}
             />
           )
         })}

@@ -1,6 +1,6 @@
 import { ShoppingCart } from 'phosphor-react'
 import { ChangeEvent, useContext, useState } from 'react'
-import { CoffeeContext } from '../../../../contexts/CoffeesContexts'
+import { CoffeeContext, Coffees } from '../../../../contexts/CoffeesContexts'
 import {
   ContainerCoffee,
   ContainerDetails,
@@ -9,21 +9,13 @@ import {
   ContainerButtonCart,
 } from './styles'
 
-interface CoffeeProps {
-  imgCoffee: string
-  typeCoffee: string
-  nameCoffee: string
-  descriptionCoffee: string
-  price: string
-}
-
 export function Coffee({
-  imgCoffee,
-  typeCoffee,
-  nameCoffee,
-  descriptionCoffee,
-  price,
-}: CoffeeProps) {
+  ImgCoffee,
+  TypeCoffee,
+  Coffee,
+  DescriptionCoffee,
+  Price,
+}: Coffees) {
   const [Amount, setAmount] = useState('')
   const { setCoffeeCart } = useContext(CoffeeContext)
 
@@ -34,9 +26,9 @@ export function Coffee({
   }
   function handleNewCoffeeCart() {
     const newCoffeeCart = {
-      Coffee: nameCoffee,
-      ImgCoffee: imgCoffee,
-      Price: price,
+      Coffee,
+      ImgCoffee,
+      Price,
       Amount,
     }
     console.log(newCoffeeCart)
@@ -45,14 +37,14 @@ export function Coffee({
   return (
     <ContainerCoffee>
       <ContainerDetails>
-        <img src={imgCoffee} alt="" />
-        <span>{typeCoffee}</span>
-        <h3>{nameCoffee}</h3>
-        <p>{descriptionCoffee}</p>
+        <img src={ImgCoffee} alt="" />
+        <span>{TypeCoffee}</span>
+        <h3>{Coffee}</h3>
+        <p>{DescriptionCoffee}</p>
       </ContainerDetails>
       <ContainerBuy>
         <span>
-          R$ <strong>{price}</strong>
+          R$ <strong>{Price}</strong>
         </span>
         <ContainerTheAmount>
           <input type="number" min={0} onChange={handleAmountCoffee} />

@@ -4,7 +4,7 @@ export const ContainerCheckout = styled.div`
   align-items: center;
   justify-content: center;
 `
-export const ContainerForm = styled.form`
+export const ContainerForm = styled.div`
   width: 40rem;
   height: 36.9375rem;
   margin-top: 2.5rem;

@@ -12,6 +12,7 @@ import {
 
 export function OrderDetails() {
   const { Coffee } = useContext(CoffeeContext)
+
   let totalPriceCoffees = 0
   Coffee.map((item) => {
     totalPriceCoffees = Math.floor(

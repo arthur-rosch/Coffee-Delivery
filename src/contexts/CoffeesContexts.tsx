@@ -1,14 +1,28 @@
 import { createContext, ReactNode, useState } from 'react'
 
 export interface Coffees {
-  Coffee: string
-  ImgCoffee: string
+  Coffee?: string
+  ImgCoffee?: string
+  TypeCoffee?: string
+  DescriptionCoffee?: string
   Price: number
-  Amount: number
+  Amount?: number | string
+}
+
+export interface Address {
+  ZipCode: string
+  Street: string
+  Number: string
+  Complement: string
+  Neighborhood: string
+  City: string
+  State: string
+  Payment: string
 }
 
 export interface CoffeeContextType {
   Coffee: Coffees[]
+  createNewAddress: (address: Address) => void
   setCoffeeCart: (coffee: Coffees) => void
   removeCoffeeCart: (coffee: string) => void
 }
@@ -23,15 +37,19 @@ export function CoffeeContextProvider({
   children,
 }: CoffeeContextProviderProps) {
   const [Coffee, setCoffee] = useState<Coffees[]>([])
+  const [address, setAddress] = useState<Address[]>([])
 
   function setCoffeeCart(coffee: Coffees) {
-    const newCoffeeCart = {
+    const coffeeCart = {
       Coffee: coffee.Coffee,
       ImgCoffee: coffee.ImgCoffee,
       Price: coffee.Price,
       Amount: coffee.Amount,
     }
-    setCoffee((state) => [...state, newCoffeeCart])
+    setCoffee((state) => [...state, coffeeCart])
+  }
+  function createNewAddress(address: Address) {
+    setAddress((state) => [...state, address])
   }
   function removeCoffeeCart(coffee: string) {
     setCoffee(Coffee.filter((item) => item.Coffee !== coffee))
@@ -41,6 +59,7 @@ export function CoffeeContextProvider({
     <CoffeeContext.Provider
       value={{
         Coffee,
+        createNewAddress,
         setCoffeeCart,
         removeCoffeeCart,
       }}
