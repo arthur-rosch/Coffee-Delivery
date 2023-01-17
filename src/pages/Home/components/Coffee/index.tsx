@@ -43,7 +43,7 @@ export function Coffee({
       </ContainerDetails>
       <ContainerBuy>
         <span>
-          R$ <strong>{Price}</strong>
+          R$ <strong>{Price.toFixed(2)}</strong>
         </span>
         <ContainerTheAmount>
           <input type="number" min={0} onChange={handleAmountCoffee} />

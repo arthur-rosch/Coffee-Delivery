@@ -22,6 +22,7 @@ export interface Address {
 
 export interface CoffeeContextType {
   Coffee: Coffees[]
+  Address: Address[]
   createNewAddress: (address: Address) => void
   setCoffeeCart: (coffee: Coffees) => void
   removeCoffeeCart: (coffee: string) => void
@@ -59,6 +60,7 @@ export function CoffeeContextProvider({
     <CoffeeContext.Provider
       value={{
         Coffee,
+        Address,
         createNewAddress,
         setCoffeeCart,
         removeCoffeeCart,
