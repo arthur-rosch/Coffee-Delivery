@@ -3,13 +3,14 @@ import { createContext, ReactNode, useState } from 'react'
 export interface Coffees {
   Coffee: string
   ImgCoffee: string
-  Price: string
-  Amount: string
+  Price: number
+  Amount: number
 }
 
 export interface CoffeeContextType {
   Coffee: Coffees[]
   setCoffeeCart: (coffee: Coffees) => void
+  removeCoffeeCart: (coffee: string) => void
 }
 
 interface CoffeeContextProviderProps {
@@ -32,12 +33,16 @@ export function CoffeeContextProvider({
     }
     setCoffee((state) => [...state, newCoffeeCart])
   }
+  function removeCoffeeCart(coffee: string) {
+    setCoffee(Coffee.filter((item) => item.Coffee !== coffee))
+  }
 
   return (
     <CoffeeContext.Provider
       value={{
         Coffee,
         setCoffeeCart,
+        removeCoffeeCart,
       }}
     >
       {children}

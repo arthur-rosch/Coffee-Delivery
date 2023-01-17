@@ -37,10 +37,24 @@ export const ContainerOrderDetails = styled.div`
 
   background: ${(props) => props.theme['base-card']};
 `
-export const ContainerCoffeeList = styled.div``
+export const ContainerCoffeeList = styled.div`
+  height: 50%;
+  overflow: hidden;
+  overflow-y: scroll;
+  &&::-webkit-scrollbar {
+    width: 2px;
+    height: 0.5rem;
+    background-color: transparent;
+  }
+  &&::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 10%);
+    border-radius: 6px;
+  }
+`
 export const ContainerValueTotal = styled.div`
   width: 23rem;
   height: 5.75rem;
+
   margin-bottom: 1.5rem;
 
   div {
@@ -68,7 +82,7 @@ export const ContainerValueTotal = styled.div`
   }
 `
 export const ButtonConfirmOrder = styled.button`
-  width: 100%;
+  width: 23rem;
   height: 2.875rem;
 
   border: 0;
@@ -83,4 +97,9 @@ export const ButtonConfirmOrder = styled.button`
 
   color: ${(props) => props.theme.white};
   background: ${(props) => props.theme['yellow-dark']};
+
+  &:hover {
+    transition: 0.3s;
+    background: ${(props) => props.theme.yellow};
+  }
 `

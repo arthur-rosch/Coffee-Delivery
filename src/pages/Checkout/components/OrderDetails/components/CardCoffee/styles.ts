@@ -8,6 +8,11 @@ export const ContainerCardCoffee = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
+  p {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+  }
 `
 export const ContainerInformation = styled.div`
   display: flex;
@@ -45,9 +50,19 @@ export const ButtonRemoveCoffee = styled.button`
   width: 5.6875rem;
   height: 2rem;
 
+  gap: 0.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border: 0;
   outline: none;
   border-radius: 6px;
 
   background: ${(props) => props.theme['base-button']};
+
+  &:hover {
+    background: ${(props) => props.theme['base-hover']};
+  }
 `

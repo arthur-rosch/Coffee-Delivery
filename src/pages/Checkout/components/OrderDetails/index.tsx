@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
 import { CoffeeContext, Coffees } from '../../../../contexts/CoffeesContexts'
 import { CardCoffee } from './components/CardCoffee'
 import {
@@ -11,7 +12,13 @@ import {
 
 export function OrderDetails() {
   const { Coffee } = useContext(CoffeeContext)
-  console.log(Coffee)
+  let totalPriceCoffees = 0
+  Coffee.map((item) => {
+    totalPriceCoffees = Math.floor(
+      Number(totalPriceCoffees + item.Amount * item.Price),
+    )
+  })
+
   return (
     <ContainerOrder>
       <h2>Cafés selecionados</h2>
@@ -32,18 +39,20 @@ export function OrderDetails() {
         <ContainerValueTotal>
           <div>
             <p>Total de item</p>
-            <p>R$ 10,50</p>
+            <p>R$ {totalPriceCoffees}</p>
           </div>
           <div>
             <p>Taxa de entrega</p>
-            <p>R$ 3,50</p>
+            <p>R$ 3.50</p>
           </div>
           <div>
             <strong>Total</strong>
-            <strong>R$ 33,50</strong>
+            <strong>R$ {totalPriceCoffees + 3.5}</strong>
           </div>
         </ContainerValueTotal>
-        <ButtonConfirmOrder type="button">Confinar Pedido</ButtonConfirmOrder>
+        <NavLink to={'/Success'}>
+          <ButtonConfirmOrder type="button">Confinar Pedido</ButtonConfirmOrder>
+        </NavLink>
       </ContainerOrderDetails>
     </ContainerOrder>
   )

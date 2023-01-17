@@ -170,6 +170,10 @@ export const ButtonBase = styled.input`
     border: 2px solid ${(props) => props.theme.purple};
     background: ${(props) => props.theme['purple-light']};
   }
+  &:hover {
+    transition: 0.3s;
+    background: ${(props) => props.theme['base-hover']};
+  }
 `
 export const ContainerPaymentBase = styled.div`
   display: flex;

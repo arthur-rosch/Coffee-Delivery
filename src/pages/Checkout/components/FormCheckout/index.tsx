@@ -80,7 +80,7 @@ export function FormCheckout() {
                 <label htmlFor="">CARTÃO DE CREDITO</label>
               </div>
 
-              <ButtonCreditCard type="radio"></ButtonCreditCard>
+              <ButtonCreditCard type="radio" name="Payment"></ButtonCreditCard>
             </ContainerCreditCard>
             <ContainerDebitCard>
               <div>
@@ -88,7 +88,7 @@ export function FormCheckout() {
                 <label htmlFor="">CARTÃO DE DEBITO</label>
               </div>
 
-              <ButtonDebitCard type="radio"></ButtonDebitCard>
+              <ButtonDebitCard type="radio" name="Payment"></ButtonDebitCard>
             </ContainerDebitCard>
 
             <ContainerCash>
@@ -97,7 +97,7 @@ export function FormCheckout() {
                 <label htmlFor="">DINHEIRO</label>
               </div>
 
-              <ButtonCash type="radio"></ButtonCash>
+              <ButtonCash type="radio" name="Payment"></ButtonCash>
             </ContainerCash>
           </ContainerPayment>
         </ContainerFormOfPayment>
