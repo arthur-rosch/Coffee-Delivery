@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { Trash } from 'phosphor-react'
+import { CoffeeContext, Coffees } from '../../../.././contexts/CoffeesContexts'
 import {
   ContainerCardCoffee,
   ContainerInformation,
@@ -5,12 +8,6 @@ import {
   AmountCoffee,
   ButtonRemoveCoffee,
 } from './styles'
-import { Trash } from 'phosphor-react'
-import {
-  CoffeeContext,
-  Coffees,
-} from '../../../../../../contexts/CoffeesContexts'
-import { useContext } from 'react'
 
 export function CardCoffee({ ImgCoffee, Coffee, Amount, Price }: Coffees) {
   const { removeCoffeeCart } = useContext(CoffeeContext)

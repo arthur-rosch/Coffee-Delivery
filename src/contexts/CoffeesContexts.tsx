@@ -13,7 +13,7 @@ export interface Address {
   ZipCode: string
   Street: string
   Number: string
-  Complement: string
+  Complement: string | undefined
   Neighborhood: string
   City: string
   State: string
@@ -37,7 +37,7 @@ export function CoffeeContextProvider({
   children,
 }: CoffeeContextProviderProps) {
   const [Coffee, setCoffee] = useState<Coffees[]>([])
-  const [address, setAddress] = useState<Address[]>([])
+  const [Address, setAddress] = useState<Address[]>([])
 
   function setCoffeeCart(coffee: Coffees) {
     const coffeeCart = {

@@ -31,7 +31,6 @@ export function Coffee({
       Price,
       Amount,
     }
-    console.log(newCoffeeCart)
     setCoffeeCart(newCoffeeCart)
   }
   return (
