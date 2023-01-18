@@ -46,6 +46,7 @@ export const ButtonCart = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   border: 0;
   outline: none;
@@ -54,5 +55,28 @@ export const ButtonCart = styled.div`
   background: ${(props) => props.theme['yellow-light']};
   &:hover {
     cursor: pointer;
+  }
+
+  div {
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 25px;
+    right: 10px;
+    left: 1230px;
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+
+    color: ${(props) => props.theme.white};
+    background: ${(props) => props.theme['yellow-dark']};
   }
 `

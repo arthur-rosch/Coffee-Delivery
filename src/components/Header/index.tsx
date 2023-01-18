@@ -7,8 +7,11 @@ import {
   ContainerHeader,
 } from './styles'
 import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeesContexts'
 
 export function Header() {
+  const { Coffee } = useContext(CoffeeContext)
   return (
     <ContainerHeader>
       <NavLink to={'/'}>
@@ -20,6 +23,7 @@ export function Header() {
           <span>Porto Alegre,RS</span>
         </ButtonLocation>
         <ButtonCart>
+          <div>{Coffee.length}</div>
           <NavLink to={'/checkout'}>
             <ShoppingCart size={22} color="#DBAC2C" weight="fill" />
           </NavLink>
